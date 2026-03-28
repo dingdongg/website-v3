@@ -25,7 +25,7 @@ body[a="dark"] { @include dark-appearance; }
 // see: https://stackoverflow.com/a/61265706
 html, body { background: white; }
 
-html { height: 100%; scroll-behavior: smooth; }
+html { height: 100%; scroll-behavior: smooth; background: black; }
 
 body {
   color: black;
@@ -96,3 +96,21 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+.link-button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: monospace;
+  text-align: right;
+  /*optional*/
+  // font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  // color: #069;
+  // color: rgb(69, 168, 81);
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
