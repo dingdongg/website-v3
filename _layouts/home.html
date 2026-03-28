@@ -8,6 +8,23 @@ layout: default
   {%-endif-%}
 </header>
 
+<div style="position:relative;">
+  <input type="button" id="ascii-toggle" class="link-button" value="pause">
+  <div id="ascii-container">loading . . .</div>
+</div>
+
+<p>I'm Donggyu!</p>
+<p>
+  I like reverse engineering old video games. In particular,
+  I've been spending time digging into how the NDS encodes/decodes
+  audio playback information.
+</p>
+<p>
+  also building embedded software full-time ┖[◧ ▾ ◧ ]┒
+</p>
+
+<br>
+
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
