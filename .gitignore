@@ -9,3 +9,6 @@ _site
 vendor
 Gemfile.lock
 serve
+frames/
+*.gif
+*.py
