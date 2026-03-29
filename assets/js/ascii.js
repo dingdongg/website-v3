@@ -3,12 +3,30 @@ const pauseButton = document.getElementById("ascii-toggle");
 container.style.fontFamily = "monospace";
 container.style.whiteSpace = "pre";
 container.style.textAlign = "center";
-container.style.fontSize = "2px";
+container.style.fontSize = "3px";
 
-const FRAME_COUNT = 44;
 const DESIRED_FPS = 30;
 const FRAME_DURATION_MS = 1000 / DESIRED_FPS;
 const LOCAL_STORAGE_KEY = "asciiFrames";
+const collection = [{
+  name: "sableye",
+  frameCount: 44,
+}, {
+  name: "weavile",
+  frameCount: 30,
+}, {
+  name: "scraggy",
+  frameCount: 40,
+}, {
+  name: "gengar",
+  frameCount: 40,
+}, {
+  name: "chandelure",
+  frameCount: 70,
+}, {
+  name: "krookodile",
+  frameCount: 80,
+}];
 
 async function loadFrames() {
   // retrieve from localstorage if available
@@ -18,9 +36,11 @@ async function loadFrames() {
   }
 
   const framePromises = [];
+  const randomizer = Math.floor(Math.random() * 5);
+  const pokemon = collection[randomizer];
 
-  for (let i = 0; i < FRAME_COUNT; i += 1) {
-    const path = `/assets/ascii_frames/frame_${i.toString().padStart(4, "0")}.txt`;
+  for (let i = 0; i < pokemon.frameCount; i += 1) {
+    const path = `/assets/ascii_frames/${pokemon.name}/frame_${i.toString().padStart(4, "0")}.txt`;
     framePromises.push(
       fetch(path).then((response) => {
         if (!response.ok) {
