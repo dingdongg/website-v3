@@ -2,18 +2,23 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: "other avenues to explore:"
+  - title: "most recent orgs I have worked at:"
     entries:
-      - title: github
-        url: https://github.com/dingdongg
-      - title: linkedin
-        url: https://linkedin.com/in/donggyukimm
-      - title: rss
-        url: feed.xml
+      - title: "<code>Nexthop AI</code> | software engineer"
+      - title: "<code>DarkVision</code> | software engineer intern"
+      - title: "<code>Moment Energy</code> | full stack dev. intern"
+      - title: "<code>FORM</code> | web developer intern"
 
-  - title: recent posts
-    post_list:
-      limit: 5
-      show_more: true
-      show_more_text: cd all-posts/
-      show_more_url: archive.html
+  # - title: recent posts
+  #   post_list:
+  #     limit: 3
+  #     show_more: true
+  #     show_more_text: cd all-posts/
+  #     show_more_url: posts.html
+  
+  # - title: ma projects
+  #   project_list:
+  #     limit: 3
+  #     show_more: true
+  #     show_more_text: cd all-projects/
+  #     show_more_url: projects.html
