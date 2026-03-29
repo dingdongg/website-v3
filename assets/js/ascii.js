@@ -44,7 +44,7 @@ async function loadFrames() {
   if (cached) return JSON.parse(cached);
 
   const framePromises = [];
-  const randomizer = Math.floor(Math.random() * 5);
+  const randomizer = Math.floor(Math.random() * collection.length);
   const pokemon = collection[randomizer];
 
   for (let i = 0; i < pokemon.frameCount; i += 1) {
