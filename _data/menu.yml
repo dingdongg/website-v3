@@ -4,10 +4,10 @@
 entries:
   - title: "where I've worked:"
     entries:
-      - title: "<code>Nexthop AI</code>      software engineer"
-      - title: "<code>DarkVision</code>      software engineer intern"
-      - title: "<code>Moment Energy</code>   full stack dev. intern"
-      - title: "<code>FORM</code>            web developer intern"
+      - title: "<code><b>Nexthop AI</b></code>      software engineer"
+      - title: "<code><b>DarkVision</b></code>      software engineer intern"
+      - title: "<code><b>Moment Energy</b></code>   full stack dev. intern"
+      - title: "<code><b>FORM</b></code>            web developer intern"
 
   # - title: recent posts
   #   post_list:
