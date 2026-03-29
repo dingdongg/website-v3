@@ -2,12 +2,12 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: "most recent orgs I have worked at:"
+  - title: "where I've worked:"
     entries:
-      - title: "<code>Nexthop AI</code> | software engineer"
-      - title: "<code>DarkVision</code> | software engineer intern"
-      - title: "<code>Moment Energy</code> | full stack dev. intern"
-      - title: "<code>FORM</code> | web developer intern"
+      - title: "<pre><code>Nexthop AI</code>      software engineer</pre>"
+      - title: "<pre><code>DarkVision</code>      software engineer intern</pre>"
+      - title: "<pre><code>Moment Energy</code>   full stack dev. intern</pre>"
+      - title: "<pre><code>FORM</code>            web developer intern</pre>"
 
   # - title: recent posts
   #   post_list:
