@@ -195,20 +195,6 @@ Moving onto the markup, below is the HTML form that invokes this server action u
 
 Since I am uploading files, I have to set the form element's `enctype` to `multipart/form-data`. This way, the backend can properly read and parse the file data being sent over.
 
-I do some conditional rendering based on the results I get back from the form action.
-```svelte
-{#if form?.data}
-	<h2 class="text-4xl my-10">Party Pokemon</h2>
-	<div class="grid grid-rows-2 grid-cols-3 gap-4">
-	{#each form.data as p}
-		<Pokemon pokemon={p} />
-	{/each}
-	</div>
-{:else}
-	<!-- Render parts of the landing page. Omitted for conciseness -->
-{/if}
-```
-
 Here is the final result!
 
 ![frontend screenshot](/assets/images/posts/day4-frontend.png)
