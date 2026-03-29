@@ -1,16 +1,22 @@
 const container = document.getElementById("ascii-container");
 const pauseButton = document.getElementById("ascii-toggle");
-// container.style.fontFamily = "monospace";
+container.style.fontFamily = "monospace";
 container.style.whiteSpace = "pre";
 container.style.textAlign = "center";
-container.style.fontSize = "3px";
+container.style.fontSize = "2px";
 
 const FRAME_COUNT = 44;
 const DESIRED_FPS = 30;
 const FRAME_DURATION_MS = 1000 / DESIRED_FPS;
-const DEFAULT_FRAME_INDEX = Math.min(0, FRAME_COUNT - 1);
+const LOCAL_STORAGE_KEY = "asciiFrames";
 
 async function loadFrames() {
+  // retrieve from localstorage if available
+  if (localStorage.getItem(LOCAL_STORAGE_KEY)) {
+    console.log(localStorage.getItem(LOCAL_STORAGE_KEY).length);
+    return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  }
+
   const framePromises = [];
 
   for (let i = 0; i < FRAME_COUNT; i += 1) {
@@ -26,7 +32,10 @@ async function loadFrames() {
     );
   }
 
-  return Promise.all(framePromises);
+  const frames = await Promise.all(framePromises);
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(frames));
+
+  return frames;
 }
 
 function renderFrames(frames) {
@@ -41,7 +50,7 @@ function renderFrames(frames) {
     isPaused = !isPaused;
 
     if (isPaused) {
-      container.textContent = frames[DEFAULT_FRAME_INDEX];
+      container.textContent = frames[frameIndex];
       pauseButton.value = "resume";
       return;
     }
