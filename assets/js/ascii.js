@@ -11,22 +11,33 @@ const LOCAL_STORAGE_KEY = "asciiFrames";
 const collection = [{
   name: "sableye",
   frameCount: 44,
+  lines: 69,
 }, {
   name: "weavile",
   frameCount: 30,
+  lines: 67,
 }, {
   name: "scraggy",
   frameCount: 40,
+  lines: 66,
 }, {
   name: "gengar",
   frameCount: 40,
+  lines: 50,
 }, {
   name: "chandelure",
   frameCount: 70,
+  lines: 48,
 }, {
   name: "krookodile",
   frameCount: 80,
+  lines: 56,
 }];
+
+const framePromises = [];
+const randomizer = Math.floor(Math.random() * collection.length);
+const pokemon = collection[5];
+container.style.height = `${pokemon.lines * 1.4}px`;
 
 function cacheGet(key) {
   if (!localStorage) return null;
@@ -40,12 +51,8 @@ function cacheSet(key, value) {
 
 async function loadFrames() {
   // retrieve from localstorage if available
-  const cached = cacheGet(LOCAL_STORAGE_KEY);
-  if (cached) return JSON.parse(cached);
-
-  const framePromises = [];
-  const randomizer = Math.floor(Math.random() * collection.length);
-  const pokemon = collection[randomizer];
+  // const cached = cacheGet(LOCAL_STORAGE_KEY);
+  // if (cached) return JSON.parse(cached);
 
   for (let i = 0; i < pokemon.frameCount; i += 1) {
     const path = `/assets/ascii_frames/${pokemon.name}/frame_${i.toString().padStart(4, "0")}.txt`;
