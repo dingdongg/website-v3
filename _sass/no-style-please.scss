@@ -51,12 +51,18 @@ p { margin: 1rem 0; }
 
 li { margin: 0.4rem 0; }
 
+@media (max-width: 500px) {
+  ul { padding-left: 1rem; }
+}
+
 *:target { background: yellow; }
 
 .w {
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 hr {
@@ -134,6 +140,7 @@ img {
   // color: rgb(69, 168, 81);
   text-decoration: underline;
   cursor: pointer;
-  // position: absolute;
+  position: absolute;
+  top: 5%;
   right: 0;
 }
