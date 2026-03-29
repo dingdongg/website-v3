@@ -72,8 +72,13 @@ table, th, td {
 }
 
 code {
-  color: white;
-  background: black;
+  color: rgb(0, 0, 0);
+  background: rgb(205, 205, 205);
+  padding: 2px;
+}
+
+a {
+  color:rgb(255, 0, 0);
 }
 
 div.highlighter-rouge code {
