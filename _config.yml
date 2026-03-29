@@ -1,9 +1,9 @@
-title: donggyu's front
+title: donggyu kim
 author: Donggyu Kim
 email: donggyukimm@gmail.com
 url: https://dgkimm.com # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
-description: aGFoYS4gbm90aGluZyBoaWRkZW4gaGVyZS4=
+description: 44WL44WL7JWE66y06rKD64+EIOyXhuyWtOyalA==
 
 permalink: /:slug.html
 
@@ -25,6 +25,10 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+collections:
+  projects:
+    output: true
 #   - jektex
 
 # jektex:
