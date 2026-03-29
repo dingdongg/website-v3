@@ -45,7 +45,7 @@ async function loadFrames() {
 
   const framePromises = [];
   const randomizer = Math.floor(Math.random() * 5);
-  const pokemon = collection[3];
+  const pokemon = collection[randomizer];
 
   for (let i = 0; i < pokemon.frameCount; i += 1) {
     const path = `/assets/ascii_frames/${pokemon.name}/frame_${i.toString().padStart(4, "0")}.txt`;
