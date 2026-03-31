@@ -51,7 +51,7 @@ async function loadFrames() {
     );
   }
 
-  return frames;
+  return framePromises;
 }
 
 function renderFrames(frames) {
